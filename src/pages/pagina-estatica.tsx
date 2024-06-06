@@ -34,14 +34,14 @@ export default function Lista({ initialData }: { initialData: Array<ICity> }) {
 
 export const getStaticProps: GetStaticProps = async () => {
   try {
-    // const response = await fetch(
-    //   `${process.env.NEXT_PUBLIC_API_BASE_URL}/api/cities/10`,
-    //   { method: "GET" }
-    // );
-    // const initialData = await response.json();
-    // if (!response.ok) throw new Error("Erro ao obter os dados");
+    const response = await fetch(
+      `${process.env.NEXT_PUBLIC_API_BASE_URL}/api/cities/10`,
+      { method: "GET" }
+    );
+    const initialData = await response.json();
+    if (!response.ok) throw new Error("Erro ao obter os dados");
 
-    const initialData = generateCities(10);
+    // const initialData = generateCities(10);
 
     return {
       props: { initialData },
