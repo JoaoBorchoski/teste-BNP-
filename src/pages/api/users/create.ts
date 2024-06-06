@@ -20,8 +20,6 @@ export default (req: NextApiRequest, res: NextApiResponse) => {
   if (req.method === "POST") {
     const { name, email } = JSON.parse(req.body) as IUserCreate;
 
-    console.log(req.body);
-    console.log(name, email);
     if (!name || !email) {
       return res.status(400).json({ error: "Nome e email obrigatórios" });
     }
@@ -31,8 +29,6 @@ export default (req: NextApiRequest, res: NextApiResponse) => {
       name,
       email,
     };
-
-    console.log(user);
 
     users.push(user);
 

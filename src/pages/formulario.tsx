@@ -37,7 +37,6 @@ export default function Form() {
         method: "POST",
         body: JSON.stringify(data),
       });
-      console.log(await response.json());
       reset();
     } catch (error) {
       console.error(error);
