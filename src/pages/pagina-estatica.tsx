@@ -7,7 +7,7 @@
  * - A página deve ser atualizada a cada 1 minuto
  */
 
-import { use, useEffect, useState } from "react";
+import { useEffect, useState } from "react";
 
 import styles from "@/styles/lista.module.css";
 import { ICity } from "@/types/city.d";
